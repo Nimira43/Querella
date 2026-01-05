@@ -1,0 +1,11 @@
+{
+  "name": "querella",
+  "version": "1.0.0",
+  "description": "Support ticket application using the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Rabone",
+  "license": "MIT"
+}
