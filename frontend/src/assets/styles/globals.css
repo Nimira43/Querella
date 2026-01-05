@@ -1,0 +1,473 @@
+/* -----------------------------------
+   FONT + ROOT VARIABLES
+----------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
+
+:root {
+  --main: #ff4500;
+  --support: #0066ff;
+  --dark: #111;
+  --light: #fffdfa;
+  --grey-1: #333;
+  --grey-2: #999;
+  --grey-3: #ccc;
+  --grey-4: #eee;
+  --grey-5: #fafafa;
+}
+
+/* -----------------------------------
+   GLOBAL RESET
+----------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  height: 100vh;
+  background: var(--light);
+  color: var(--dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2.2;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+/* -----------------------------------
+   LAYOUT
+----------------------------------- */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--grey-3);
+  margin-bottom: 60px;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header ul li {
+  margin-left: 20px;
+}
+
+.header ul li a {
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.header ul li a:hover {
+  color: var(--grey-2);
+}
+
+.header ul li a svg {
+  margin-right: 5px;
+}
+
+/* -----------------------------------
+   HEADINGS
+----------------------------------- */
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.heading p {
+  color: var(--grey-2);
+}
+
+/* -----------------------------------
+   BOXES
+----------------------------------- */
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.boxes div {
+  padding: 30px;
+  border: 1px solid var(--grey-3);
+  border-radius: 10px;
+  background: var(--grey-5);
+}
+
+.boxes h2 {
+  margin-top: 20px;
+}
+
+.boxes a:hover {
+  color: var(--grey-2);
+}
+
+/* -----------------------------------
+   FORMS
+----------------------------------- */
+.form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--grey-3);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  background: var(--light);
+  color: var(--dark);
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+/* -----------------------------------
+   BUTTONS
+----------------------------------- */
+.btn {
+  padding: 10px 20px;
+  border: 1px solid var(--dark);
+  border-radius: 5px;
+  background: var(--dark);
+  color: var(--light);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.btn svg {
+  margin-right: 8px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.btn-reverse {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn-sm {
+  padding: 5px 15px;
+  font-size: 13px;
+}
+
+.btn-danger {
+  background: #8b0000;
+  border: none;
+}
+
+.btn-back {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* -----------------------------------
+   TICKET CREATED
+----------------------------------- */
+.ticket-created {
+  border: 1px solid var(--grey-3);
+  border-radius: 5px;
+  padding: 50px;
+  background: var(--grey-5);
+}
+
+.ticket-number {
+  margin-bottom: 30px;
+}
+
+.ticket-number h2 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+.ticket-number p {
+  font-size: 1.3rem;
+}
+
+.ticket-info {
+  font-size: 1.3rem;
+}
+
+/* -----------------------------------
+   TICKET LIST
+----------------------------------- */
+.ticket,
+.ticket-headings {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: var(--grey-4);
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.ticket-headings {
+  font-weight: 700;
+}
+
+/* STATUS BADGES */
+.status {
+  background-color: var(--grey-1);
+  color: var(--light);
+  width: 100px;
+  padding: 0 20px;
+  justify-self: center;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.status-new {
+  background-color: #008000;
+}
+
+.status-open {
+  background-color: #4682b4;
+}
+
+.status-closed {
+  background-color: #8b0000;
+}
+
+/* -----------------------------------
+   TICKET PAGE
+----------------------------------- */
+.ticket-page {
+  position: relative;
+  text-align: left;
+}
+
+.ticket-page h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ticket-page .btn {
+  margin-bottom: 30px;
+}
+
+.ticket-page .btn-block {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.ticket-desc {
+  margin: 20px 0;
+  font-size: 17px;
+  background-color: var(--grey-4);
+  border: 1px solid var(--grey-3);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* -----------------------------------
+   NOTES
+----------------------------------- */
+.note {
+  border: 1px solid var(--grey-3);
+  border-radius: 5px;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  background: var(--grey-5);
+}
+
+.note-head {
+  background: var(--grey-4);
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.note-date {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 14px;
+  color: var(--grey-2);
+}
+
+.delete-note {
+  color: #ff0000;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+/* -----------------------------------
+   CLOSE BUTTON
+----------------------------------- */
+.btn-close {
+  background: none;
+  border: none;
+  color: var(--dark);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  color: #ff0000;
+  transform: scale(0.98);
+}
+
+/* -----------------------------------
+   STATUS TEXT
+----------------------------------- */
+p.status-in-progress {
+  color: #ff4500;
+}
+
+p.status-waiting {
+  color: #ff0000;
+}
+
+p.status-ready {
+  color: #4682b4;
+}
+
+p.status-complete {
+  color: #008000;
+}
+
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
+footer {
+  position: sticky;
+  top: 95vh;
+  text-align: center;
+}
+
+/* -----------------------------------
+   LOADING SPINNER
+----------------------------------- */
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: var(--dark) transparent var(--grey-1) transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* -----------------------------------
+   RESPONSIVE
+----------------------------------- */
+@media (max-width: 600px) {
+  .boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .ticket-created h2,
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+  }
+}
