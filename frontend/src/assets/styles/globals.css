@@ -93,7 +93,7 @@ h3 {
 }
 
 .header ul li a:hover {
-  color: var(--grey-2);
+  color: var(--main);
 }
 
 .header ul li a svg {
