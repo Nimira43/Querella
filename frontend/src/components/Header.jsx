@@ -5,8 +5,13 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <header className='header'>
-      <div className="logo">
-        <Link to='/'>Helpdesk</Link>
+      <div className='logo'>
+        <Link
+          to='/'
+          className='logo-text'
+        >
+          Querella
+        </Link>
       </div>
 
       <ul>

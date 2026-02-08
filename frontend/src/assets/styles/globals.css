@@ -1,9 +1,11 @@
 /* -----------------------------------
    FONT + ROOT VARIABLES
 ----------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Silkscreen:wght@400;700&family=Tiny5&display=swap');
 
 :root {
+  --main-font: 'Mulish', sans-serif;
+  --logo-font: 'Tiny5', sans-serif;
   --main: #ff4500;
   --support: #0066ff;
   --dark: #111;
@@ -25,10 +27,16 @@
 }
 
 body {
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--main-font);
   height: 100vh;
   background: var(--light);
   color: var(--dark);
+}
+
+.logo-text {
+  font-family: var(--logo-font);
+  font-size: 2rem;
+  color: var(--main);
 }
 
 a {
