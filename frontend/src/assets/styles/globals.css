@@ -15,6 +15,10 @@
   --grey-3: #ccc;
   --grey-4: #eee;
   --grey-5: #fafafa;
+  --danger: #d10909;
+  --success: #0bad0b;
+  --info: #3078b4;
+  --warning: #e2a114;
 }
 
 /* -----------------------------------
@@ -191,8 +195,9 @@ h3 {
   background: var(--dark);
   color: var(--light);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
+  text-transform: uppercase;
   text-align: center;
   appearance: button;
   display: flex;
@@ -225,7 +230,12 @@ h3 {
 }
 
 .btn-danger {
-  background: #8b0000;
+  background: var(--danger);
+  border: none;
+}
+
+.btn-main {
+  background: var(--main);
   border: none;
 }
 
@@ -295,15 +305,15 @@ h3 {
 }
 
 .status-new {
-  background-color: #008000;
+  background-color: var(--success);
 }
 
 .status-open {
-  background-color: #4682b4;
+  background-color: var(--info);
 }
 
 .status-closed {
-  background-color: #8b0000;
+  background-color: var(--danger);
 }
 
 /* -----------------------------------
@@ -369,7 +379,7 @@ h3 {
 }
 
 .delete-note {
-  color: #ff0000;
+  color: var(--danger);
   cursor: pointer;
   position: absolute;
   bottom: 10px;
@@ -391,7 +401,7 @@ h3 {
 }
 
 .btn-close:hover {
-  color: #ff0000;
+  color: var(--danger);
   transform: scale(0.98);
 }
 
@@ -399,19 +409,19 @@ h3 {
    STATUS TEXT
 ----------------------------------- */
 p.status-in-progress {
-  color: #ff4500;
+  color: var(--warning);
 }
 
 p.status-waiting {
-  color: #ff0000;
+  color: var(--danger);
 }
 
 p.status-ready {
-  color: #4682b4;
+  color: var(--info);
 }
 
 p.status-complete {
-  color: #008000;
+  color: var(--success);
 }
 
 /* -----------------------------------
