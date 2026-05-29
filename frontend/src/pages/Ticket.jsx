@@ -71,9 +71,7 @@ function Ticket() {
         >
           Close Ticket
         </button>
-      )
-      
-      }
+      )}
     </div>
   )
 }
