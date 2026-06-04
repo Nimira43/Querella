@@ -244,6 +244,14 @@ h3 {
   margin-bottom: 20px;
 }
 
+.note-dark {
+  background-color: var(--dark);
+}
+
+.note-main {
+  background-color: var(--main);
+}
+
 /* -----------------------------------
    TICKET CREATED
 ----------------------------------- */
