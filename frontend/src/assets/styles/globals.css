@@ -1,6 +1,5 @@
-/* -----------------------------------
-   FONT + ROOT VARIABLES
------------------------------------ */
+/* FONT + ROOT VARIABLES */
+
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Silkscreen:wght@400;700&family=Tiny5&display=swap');
 
 :root {
@@ -19,11 +18,11 @@
   --success: #0fd70f;
   --info: #398acd;
   --warning: #e2a114;
+  --transitioning: all 0.5s ease-in-out;
 }
 
-/* -----------------------------------
-   GLOBAL RESET
------------------------------------ */
+/* GLOBAL RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -68,9 +67,8 @@ h3 {
   color: var(--dark);
 }
 
-/* -----------------------------------
-   LAYOUT
------------------------------------ */
+/* LAYOUT */
+
 .container {
   width: 100%;
   max-width: 960px;
@@ -112,9 +110,8 @@ h3 {
   margin-right: 5px;
 }
 
-/* -----------------------------------
-   HEADINGS
------------------------------------ */
+/* HEADINGS */
+
 .heading {
   font-size: 1rem;
   font-weight: 400;
@@ -126,9 +123,8 @@ h3 {
   color: var(--grey-2);
 }
 
-/* -----------------------------------
-   BOXES
------------------------------------ */
+/* BOXES */
+
 .boxes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -154,9 +150,8 @@ h3 {
   color: var(--grey-2);
 }
 
-/* -----------------------------------
-   FORMS
------------------------------------ */
+/* FORMS */
+
 .form {
   width: 70%;
   margin: 0 auto;
@@ -175,7 +170,7 @@ h3 {
   border-radius: 5px;
   margin-bottom: 10px;
   font-family: inherit;
-  background: var(--light);
+  background: var( -light);
   color: var(--dark);
 }
 
@@ -185,9 +180,8 @@ h3 {
   margin: 0 0 5px 3px;
 }
 
-/* -----------------------------------
-   BUTTONS
------------------------------------ */
+/* BUTTONS */
+
 .btn {
   padding: 10px 20px;
   border: 1px solid var(--dark);
@@ -252,9 +246,8 @@ h3 {
   background-color: var(--main);
 }
 
-/* -----------------------------------
-   TICKET CREATED
------------------------------------ */
+/* TICKET CREATED */
+
 .ticket-created {
   border: 1px solid var(--grey-3);
   border-radius: 5px;
@@ -279,9 +272,8 @@ h3 {
   font-size: 1.3rem;
 }
 
-/* -----------------------------------
-   TICKET LIST
------------------------------------ */
+/* TICKET LIST */
+
 .ticket,
 .ticket-headings {
   display: grid;
@@ -301,6 +293,7 @@ h3 {
 }
 
 /* STATUS BADGES */
+
 .status {
   background-color: var(--grey-1);
   color: var(--light);
@@ -326,9 +319,8 @@ h3 {
   background-color: var(--danger);
 }
 
-/* -----------------------------------
-   TICKET PAGE
------------------------------------ */
+/* TICKET PAGE */
+
 .ticket-page {
   position: relative;
   text-align: left;
@@ -358,9 +350,8 @@ h3 {
   border-radius: 5px;
 }
 
-/* -----------------------------------
-   NOTES
------------------------------------ */
+/* NOTES */
+
 .note {
   border: 1px solid var(--grey-3);
   border-radius: 5px;
@@ -388,6 +379,21 @@ h3 {
   color: var(--grey-2);
 }
 
+.notes-textarea {
+  border: 1px solid var(--grey-3);
+  border-radius: 5px;
+  font-family: inherit;
+  background: var(--light);
+  color: var(--dark);
+  outline: none;
+  transition: var(--transitioning);
+}
+
+.notes-textarea:hover,
+.notes-textarea:focus {
+  border: 1px solid var(--main);
+}
+
 .delete-note {
   color: var(--danger);
   cursor: pointer;
@@ -396,9 +402,8 @@ h3 {
   right: 20px;
 }
 
-/* -----------------------------------
-   CLOSE BUTTON
------------------------------------ */
+/* CLOSE BUTTON */
+
 .btn-close {
   background: none;
   border: none;
@@ -415,9 +420,8 @@ h3 {
   transform: scale(0.98);
 }
 
-/* -----------------------------------
-   STATUS TEXT
------------------------------------ */
+/* STATUS TEXT */
+
 p.status-in-progress {
   color: var(--warning);
 }
@@ -434,18 +438,16 @@ p.status-complete {
   color: var(--success);
 }
 
-/* -----------------------------------
-   FOOTER
------------------------------------ */
+/* FOOTER */
+
 footer {
   position: sticky;
   top: 95vh;
   text-align: center;
 }
 
-/* -----------------------------------
-   LOADING SPINNER
------------------------------------ */
+/* LOADING SPINNER */
+
 .loadingSpinnerContainer {
   position: fixed;
   top: 0;
@@ -478,9 +480,8 @@ footer {
   }
 }
 
-/* -----------------------------------
-   RESPONSIVE
------------------------------------ */
+/* RESPONSIVE */
+
 @media (max-width: 600px) {
   .boxes {
     grid-template-columns: 1fr;
