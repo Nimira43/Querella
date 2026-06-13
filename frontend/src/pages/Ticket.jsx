@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getTicket, closeTicket } from '../feature/tickets/ticketSlice' 
-import { getNotes, reset as notesReset } from '../feature/notes/noteSlice'
+import { getNotes, createNote, reset as notesReset } from '../feature/notes/noteSlice'
 import { useParams, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify' 
 import BackButton from '../components/BackButton'
@@ -55,7 +55,7 @@ function Ticket() {
 
   const onNoteSubmit = (e) => {
     e.preventDefault()
-    console.log('Submit')
+    dispatch(createNote({ noteText, ticketId }))
     closeModal()
   }
 
@@ -150,7 +150,7 @@ function Ticket() {
       
       {ticket.status !== 'closed' && (
          <button 
-          className='btn btn-main btn-block'
+          className='btn btn-block'
           onClick={onTicketClose}
         >
           Close Ticket
